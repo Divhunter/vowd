@@ -1,11 +1,11 @@
 .formInput input {
     top: 1vh;
-    background-color: rgba(0, 150, 214, 0.2);
+    background-color: rgb(1, 78, 110);
     transition: background-color .2s;
 }
 
 .formInput input:hover {
-    background-color: rgb(1, 78, 110);
+    background-color: rgb(15, 110, 151);
     transition: background-color .2s;
 }
 
