@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/vowd/static/css/main.ff9c03fa.css",
-    "main.js": "/vowd/static/js/main.ce992711.js",
+    "main.css": "/vowd/static/css/main.d75b474f.css",
+    "main.js": "/vowd/static/js/main.49539371.js",
     "static/media/toulouse.jpg": "/vowd/static/media/toulouse.32af49cfbeb101db4ff4.jpg",
     "static/media/letsTalk.png": "/vowd/static/media/letsTalk.7ea80bf46370c3562f68.png",
     "static/media/tree.jpg": "/vowd/static/media/tree.5542d8cd28e1f1df9758.jpg",
@@ -25,11 +25,11 @@
     "static/media/pen.png": "/vowd/static/media/pen.71e76d40613b3fa0b23d.png",
     "static/media/hands.png": "/vowd/static/media/hands.5fbcae6210a97abc349b.png",
     "index.html": "/vowd/index.html",
-    "main.ff9c03fa.css.map": "/vowd/static/css/main.ff9c03fa.css.map",
-    "main.ce992711.js.map": "/vowd/static/js/main.ce992711.js.map"
+    "main.d75b474f.css.map": "/vowd/static/css/main.d75b474f.css.map",
+    "main.49539371.js.map": "/vowd/static/js/main.49539371.js.map"
   },
   "entrypoints": [
-    "static/css/main.ff9c03fa.css",
-    "static/js/main.ce992711.js"
+    "static/css/main.d75b474f.css",
+    "static/js/main.49539371.js"
   ]
 }
