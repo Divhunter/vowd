@@ -90,8 +90,8 @@
 	position: absolute;
     float: right;
     top: 19.6vw;
-	right: 7.5vw;
-	font-size: 10vw;
+	right: 8vw;
+	font-size: 8vw;
 	color: white;
 	transition: color .4s;
 	cursor: pointer;
@@ -107,8 +107,8 @@
 	position: absolute;
     float: right;
     top: 20.8vw;
-	right: 6.4vw;
-	font-size: 8.8vw;
+	right: 7.5vw;
+	font-size: 6.5vw;
 	color: white;
 	cursor: pointer;
 	z-index: 500;
@@ -203,8 +203,8 @@ menu {
 	}
 
 	.navbar__user {
-		top: 40px;
-		font-size: 40px;
+		top: 44px;
+		font-size: 30px;
 	}
 	
 	.navbar__logout__btn {
@@ -216,15 +216,15 @@ menu {
 	}
 
 	.navbar__button-x {
-		top: 38px;
-		right: 43.3px;
-		font-size: 45px;
+		top: 52px;
+		right: 40px;
+		font-size: 25px;
 	}
 	
 	.navbar__button-bars {
-		top: 40px;
+		top: 54px;
 		right: 40px;
-		font-size: 40px;
+		font-size: 20px;
 	}
 	
 	menu {

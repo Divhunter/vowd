@@ -100,17 +100,6 @@
     100%{opacity: 1;}
 }
 
-.banner__text > span {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 4.5vw;
-}
-
-.banner__text > a {
-    color: rgb(77, 233, 220);
-    font-weight: 700;
-    font-size: 5vw;
-}
-
 .banner__text__end {
     font-size: 5vw;
     font-weight: bold;

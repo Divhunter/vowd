@@ -26,10 +26,6 @@ const Banner = () => {
 			</h1>
 			<h2 className='banner__subtitle'>Simplement votre !</h2>
 			<p className='banner__text'>
-				Aaron DIVIOKA - <span><strong>(+33) 635 774 835</strong></span>
-				<br/>
-				<a href='mailto:contact@vowd.fr'>contact@vowd.fr</a> - www.vowd.fr
-				<br/>
 				Consultant en développement web
 				<br/> 
 				& communication digitale
