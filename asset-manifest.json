@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/vowd/static/css/main.6688fa6e.css",
+    "main.js": "/vowd/static/js/main.1576f8dd.js",
+    "static/media/toulouse.jpg": "/vowd/static/media/toulouse.32af49cfbeb101db4ff4.jpg",
+    "static/media/letsTalk.png": "/vowd/static/media/letsTalk.7ea80bf46370c3562f68.png",
+    "static/media/tree.jpg": "/vowd/static/media/tree.5542d8cd28e1f1df9758.jpg",
+    "static/media/footer-people.png": "/vowd/static/media/footer-people.fc059a09f115f544262c.png",
+    "static/media/logo-vowd.png": "/vowd/static/media/logo-vowd.ed5c6314516741dfcf72.png",
+    "static/media/trees.png": "/vowd/static/media/trees.a4191e63d5b2cf718d8a.png",
+    "static/media/me.jpg": "/vowd/static/media/me.cc2aa3b0f05fbf1fd230.jpg",
+    "static/media/desktop.png": "/vowd/static/media/desktop.5c2ec4863a8db73e65ba.png",
+    "static/media/keyboard.jpg": "/vowd/static/media/keyboard.e9d920b69569e494afd7.jpg",
+    "static/media/montain.jpg": "/vowd/static/media/montain.4a0a3c72e6df7a799beb.jpg",
+    "static/media/contact.jpg": "/vowd/static/media/contact.60e7e7401f066db8052e.jpg",
+    "static/media/el-taros.jpg": "/vowd/static/media/el-taros.67810eda18146197d6e9.jpg",
+    "static/media/me2.jpg": "/vowd/static/media/me2.4e6316a634ccc0e2dba7.jpg",
+    "static/media/logo-vowd-error.png": "/vowd/static/media/logo-vowd-error.882ab8066887293879bc.png",
+    "static/media/footer-people-m1.png": "/vowd/static/media/footer-people-m1.fc1c60edd1af87287a11.png",
+    "static/media/about.jpg": "/vowd/static/media/about.980539099017148b674b.jpg",
+    "static/media/double-arrow-down.png": "/vowd/static/media/double-arrow-down.f5f6b91ee54917c72aed.png",
+    "static/media/responsive.png": "/vowd/static/media/responsive.8ab890b877fa024d1904.png",
+    "static/media/seo.png": "/vowd/static/media/seo.4a58f635553c9f485277.png",
+    "static/media/illustration.png": "/vowd/static/media/illustration.768a8b7e756c11460ad4.png",
+    "static/media/pen.png": "/vowd/static/media/pen.71e76d40613b3fa0b23d.png",
+    "static/media/hands.png": "/vowd/static/media/hands.5fbcae6210a97abc349b.png",
+    "index.html": "/vowd/index.html",
+    "main.6688fa6e.css.map": "/vowd/static/css/main.6688fa6e.css.map",
+    "main.1576f8dd.js.map": "/vowd/static/js/main.1576f8dd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6688fa6e.css",
+    "static/js/main.1576f8dd.js"
+  ]
+}
