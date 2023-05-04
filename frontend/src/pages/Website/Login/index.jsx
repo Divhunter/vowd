@@ -76,7 +76,7 @@ const Login = () => {
 
 		await axios({
 			method: 'post',
-			url: 'http://localhost:4200/api/auth/login',
+			url: 'https://divhunter.github.io/vowd/api/auth/login',
 			credentials: true,
 			data: {
 				userName: values.userName,
