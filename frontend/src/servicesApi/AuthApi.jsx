@@ -11,7 +11,7 @@ export function hasAuthenticated() {
 }
 
 export function login(credentials) {
-    axios.post('http://127.0.0.1/api/auth/login', credentials)
+    axios.post('https://divhunter.github.io/vowd/api/auth/login', credentials)
     .then(res => JSON.stringify(res.data.token))
     .then(token => {
         addItem('token', token)
