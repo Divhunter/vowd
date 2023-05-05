@@ -73,7 +73,7 @@ const Register = () => {
 		else {
 			await axios({
 				method: 'post',
-				url: 'https://divhunter.github.io/vowdbackend/api/auth/register',
+				url: 'http://localhost:4200/api/auth/register',
 				credentials: true,
 				data: {
 					userName: values.userName,

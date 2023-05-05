@@ -34,7 +34,7 @@ app.use(express.urlencoded({extended: false}));
 
 // Définition des entêtes CORS
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000/vowd', 'https://vowd/onrender.com');
     res.setHeader(
       "Access-Control-Allow-Headers",
       "Origin, X-Requested-With, Content, Accept, Content-Type, Authorization, Content-Type, Access-Control-Allow-Headers"
@@ -45,7 +45,6 @@ app.use((req, res, next) => {
 
 app.use('/post', postRoutes);
 app.use('/api/auth', userRoutes);
-app.use('/images', express.static(path.join(__dirname, 'images')));
 
 // Application des middlewares de sécurité 
 app.use(helmet());

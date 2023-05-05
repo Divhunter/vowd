@@ -63,7 +63,7 @@ const SendMail = () => {
 
 		await axios({
 			method: 'post',
-			url: 'https://divhunter.github.io/vowdbackend/api/auth/sendMail',
+			url: 'http://localhost:4200/api/auth/sendMail',
 			credentials: true,
 			data: {
 				userName: values.userName,

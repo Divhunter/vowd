@@ -73,7 +73,7 @@ const NewPass = () => {
         else {
             await axios({
                 method: 'post',
-                url: 'https://divhunter.github.io/vowdbackend/api/auth/updatePassword',
+                url: 'http://localhost:4200/api/auth/updatePassword',
                 credentials: true,
                 data: {
                     userName: values.userName,
