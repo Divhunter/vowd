@@ -33,9 +33,9 @@ passwordSchema
 .has().uppercase()      // Requière au moins une lettre majuscule
 .has().lowercase()      // Requière au moins une lettre minuscule
 .has().digits()         // Requière au moins un chiffre
-.has().symbols()        // Requière au moins un caractère spécial
+.has().symbols(1)       // Requière au moins un caractère spécial
 .has().not().spaces()   // Espace blanc non autorisé
-.is().not().oneOf(['Passw0rd', 'Password123', 'Azerty123']); 
+.is().not().oneOf(['Passw0rd', 'Password123', 'Azerty123']); //Mots de passe non valides
 
 //=========================================================================================
 // Relatif à la création d'un compte utilisateur
@@ -52,7 +52,7 @@ module.exports.register = (req, res, next) => {
             return res.json({ emailRegError: 'L\'adresse mail n\'est pas valide !' }).status(400);
         } 
         else if (!passwordSchema.validate(req.body.password)) {
-            return res.json({ passwordRegError:'Le mot de passe doit contenir 8 à 20 caractères dont au moins une lettre majuscule, une lettre minuscule, un chiffre, et un caractère spécial !' }).status(400);
+            return res.json({ passwordRegError:'Le mot de passe doit contenir 8 à 20 caractères dont au moins une lettre majuscule, une lettre minuscule, un chiffre, et un seul caractère spécial !' }).status(400);
         }
         else {
             bcrypt.hash(req.body.password, 10)
@@ -103,43 +103,42 @@ module.exports.login = (req, res, next) => {
 // Relatif à l'envoi du mail d'authentification'
 
 module.exports.sendMail = (req, res, next) => {
-    const userName = req.body.userName
-    const email = req.body.email
-    const verifUser = { userName: userName, email: email }
-    UserModel.findOne(verifUser) 
-    if (!verifUser) {
-        return res.json({ userSendError: 'Erreur d\'authentification !' }).status(401);
-    } 
-    else {
-        const transporter = nodeMailer.createTransport({
-            host: 'smtp-mail.outlook.com',
-            secureConnection: false,
-            port: 587,
-            tls: {
-                ciphers:"SSLv3"
-            },
-            auth: {
-                user: process.env.EMAIL,
-                pass: process.env.PASSWORD
-            }
-        })
-        
-        const mailOptions = {
-            from: process.env.EMAIL,
-            to: email,
-            subject: 'Réinitialisation de mot de passe',
-            html: `<p>Bonjour ${userName}, voici le lien pour réinitialiser votre mot de passe: ${process.env.CLIENT_URL}/password </p>`
+    UserModel.findOne({ userName: req.body.userName, email: req.body.email })
+    .then(user => {
+        if (!user) {
+            return res.json({ userSendError: 'Ce compte n\'existe pas !' }).status(401);
         }
-    
-        transporter.sendMail(mailOptions, error => {
-            if (error) {
-                res.json({ error: 'Une erreur inattendue est survenue, veuillez réesayer ulterieurement !' }).status(400)
-            } 
-            else {
-                res.json({ messageSend: userName +', nous traitons votre demande !' }).status(201)
-            };
-        })
-    };
+        else {
+            const transporter = nodeMailer.createTransport({
+                host: 'smtp-mail.outlook.com',
+                secureConnection: false,
+                port: 587,
+                tls: {
+                    ciphers:"SSLv3"
+                },
+                auth: {
+                    user: process.env.EMAIL,
+                    pass: process.env.PASSWORD
+                }
+            })
+        
+            const mailOptions = {
+                from: process.env.EMAIL,
+                to: email,
+                subject: 'Réinitialisation de mot de passe',
+                html: `<p>Bonjour ${userName}, voici le lien pour réinitialiser votre mot de passe: ${process.env.CLIENT_URL}/password </p>`
+            }
+        
+            transporter.sendMail(mailOptions, error => {
+                if (error) {
+                    res.json({ error: 'Une erreur inattendue est survenue, veuillez réesayer ulterieurement !' }).status(400)
+                } 
+                else {
+                    res.json({ messageSend: userName +', nous traitons votre demande !' }).status(201)
+                };
+            })
+        };
+    })
 }
 
 
